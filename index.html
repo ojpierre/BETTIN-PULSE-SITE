@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bettinpulse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Common Header -->
+    <div class="header">
+        <div class="left-section">
+            LOGO
+        </div>
+
+        <div class="right-section">
+            <button class="register-button">Register</button>
+            <button class="login-button">Login</button>
+        </div>
+    </div>
+
+    <div class="center-section">
+        <div class="button-group">
+            <button class="button-mid">Game One</button>
+            <button class="button-mid">Live Games</button>
+            <button class="button-mid">Cashout</button>
+            <button class="button-mid">Jackpots</button>
+        </div>
+    </div>
+
+    <!-- Common Sidebar -->
+    <div class="side-bar">
+        <div class="sidebar-section">
+            <div class="games-button"><ion-icon name="game-controller-outline"></ion-icon> <button
+                    class="game-button">Casino Games</button></div>
+            <div class="games-button"><ion-icon name="football-outline"></ion-icon> <button
+                    class="game-button">Sports</button></div>
+            <div class="games-button"><ion-icon name="megaphone-outline"></ion-icon> <button
+                    class="game-button">Forum</button></div>
+            <div class="games-button"><ion-icon name="chatbubbles-outline"></ion-icon> <button
+                    class="game-button">Support</button></div>
+            <div class="games-button"><ion-icon name="trophy-outline"></ion-icon> <button
+                    class="game-button">Promotions</button></div>
+            <div class="games-button"><ion-icon name="wallet-outline"></ion-icon> <button
+                    class="game-button">Wallet</button></div>
+            <div class="games-button"><ion-icon name="stats-chart-outline"></ion-icon> <button
+                    class="game-button">Statistics</button></div>
+            <div class="games-button"><ion-icon name="settings-outline"></ion-icon> <button
+                    class="game-button">Settings</button></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Large Picture Section -->
+        <section class="hero-section">
+            <img src="https://via.placeholder.com/1920x1080" alt="Hero Image">
+        </section>
+
+        <!-- Featured Games Section -->
+        <section class="featured-games">
+            <h2>Featured Games</h2>
+            <div class="horizontal-scroll">
+                <button class="scroll-button left-scroll">&lt;</button>
+                <div class="games-grid">
+                    <div class="game-card">Game 1</div>
+                    <div class="game-card">Game 2</div>
+                    <div class="game-card">Game 3</div>
+                    <div class="game-card">Game 4</div>
+                    <div class="game-card">Game 5</div>
+                    <div class="game-card">Game 6</div>
+                </div>
+                <button class="scroll-button right-scroll">&gt;</button>
+            </div>
+        </section>
+
+        <!-- Live Events Section -->
+        <section class="live-events">
+            <h2>Live Events</h2>
+            <div class="horizontal-scroll">
+                <button class="scroll-button left-scroll">&lt;</button>
+                <div class="events-list">
+                    <div class="event-item">Event 1</div>
+                    <div class="event-item">Event 2</div>
+                    <div class="event-item">Event 3</div>
+                    <div class="event-item">Event 4</div>
+                    <div class="event-item">Event 5</div>
+                    <div class="event-item">Event 6</div>
+                </div>
+                <button class="scroll-button right-scroll">&gt;</button>
+            </div>
+        </section>
+
+        <!-- Promotions Section -->
+        <section class="promotions">
+            <h2>Promotions</h2>
+            <div class="horizontal-scroll">
+                <button class="scroll-button left-scroll">&lt;</button>
+                <div class="promotions-list">
+                    <div class="promotion-item">Promotion 1</div>
+                    <div class="promotion-item">Promotion 2</div>
+                    <div class="promotion-item">Promotion 3</div>
+                    <div class="promotion-item">Promotion 4</div>
+                    <div class="promotion-item">Promotion 5</div>
+                    <div class="promotion-item">Promotion 6</div>
+                </div>
+                <button class="scroll-button right-scroll">&gt;</button>
+            </div>
+        </section>
+
+        <!-- User Testimonials Section -->
+        <section class="testimonials">
+            <h2>User Testimonials</h2>
+            <div class="horizontal-scroll">
+                <button class="scroll-button left-scroll">&lt;</button>
+                <div class="testimonials-list">
+                    <div class="testimonial-item">"Great site!" - User 1</div>
+                    <div class="testimonial-item">"Amazing experience." - User 2</div>
+                    <div class="testimonial-item">"Highly recommend!" - User 3</div>
+                    <div class="testimonial-item">"Best betting site ever!" - User 4</div>
+                    <div class="testimonial-item">"Excellent customer service." - User 5</div>
+                    <div class="testimonial-item">"Fast payouts!" - User 6</div>
+                </div>
+                <button class="scroll-button right-scroll">&gt;</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Ionicons Script -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Modal overlay -->
+    <div class="popup-overlay">
+        <!-- Login Popup -->
+        <div class="popup" id="loginPopup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <div class="login-container">
+                    <h2>Login</h2>
+                    <form action="#" method="POST">
+                        <label for="login-username">Username:</label>
+                        <input type="text" id="login-username" name="username" required>
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" name="password" required>
+                        <button class="login-submit-button" type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register Popup -->
+        <div class="popup" id="registerPopup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <div class="register-container">
+                    <h2>Register</h2>
+                    <form action="#" method="POST">
+                        <label for="register-username">Username:</label>
+                        <input type="text" id="register-username" name="username" required>
+                        <label for="register-email">Email:</label>
+                        <input type="email" id="register-email" name="email" required>
+                        <label for="register-password">Password:</label>
+                        <input type="password" id="register-password" name="password" required>
+                        <button class="register-submit-button" type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

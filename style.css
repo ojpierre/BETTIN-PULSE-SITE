@@ -1,0 +1,384 @@
+body {
+    height: 3000px;
+    background-color: #3E3E3E;
+    margin: 0;
+    font-family: 'Dongle', sans-serif;
+    border: none;
+    padding-left: 160px;
+}
+
+.center-section {
+    text-align: center;
+    margin-top: 75px;
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding-left: 160px;
+            box-sizing: border-box;
+}
+
+.center-section .button-group {
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+}
+
+.center-section .button-group button {
+    margin: 5px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    height: 50px;
+    border: none;
+    color: white;
+    background-color: #000000;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.center-section .button-group button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #0000FF;
+    transition: all 0.3s ease;
+}
+
+.center-section .button-group button:hover::after {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3E3E3E;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding-left: 160px;
+    box-sizing: border-box;
+}
+
+.left-section {
+    flex: 1;
+    margin-left: 24px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.right-section {
+    flex: 1;
+    text-align: right;
+}
+
+.login-button,
+.register-button {
+    font-family: 'Dongle', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #000000;
+    cursor: pointer;
+    position: relative;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.login-button::after,
+.register-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #0000FF;
+    transition: all 0.3s ease;
+}
+
+.login-button:hover::after,
+.register-button:hover::after {
+    width: 100%;
+}
+
+.side-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #3E3E3E;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-section {
+    width: 100%;
+}
+
+.games-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.games-button ion-icon {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.games-button:hover {
+    background-color: #555;
+}
+
+.game-button {
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Dongle', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.main-content {
+    margin-top: 120px;
+    padding: 20px;
+    color: white;
+    width: calc(100% - 160px);
+    margin-left: 120px;
+}
+
+.hero-section {
+    height: 50vh;
+    overflow: hidden;
+}
+
+.hero-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-games,
+.live-events,
+.promotions,
+.testimonials {
+    margin: 40px 0;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.horizontal-scroll {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.scroll-button {
+    background-color: #000000;
+    color: #0000FF;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.3s;
+    z-index: 100;
+}
+
+.scroll-button:hover {
+    background-color: #0000FF;
+    color: white;
+}
+
+.games-grid,
+.events-list,
+.promotions-list,
+.testimonials-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.games-grid::-webkit-scrollbar,
+.events-list::-webkit-scrollbar,
+.promotions-list::-webkit-scrollbar,
+.testimonials-list::-webkit-scrollbar {
+    display: none;
+}
+
+.game-card,
+.event-item,
+.promotion-item,
+.testimonial-item {
+    min-width: 200px;
+    height: 200px;
+    background-color: #2F2F2F;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+    flex: none;
+}
+
+.game-card:hover,
+.event-item:hover,
+.promotion-item:hover,
+.testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-content label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.popup-content input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-submit-button,
+.register-submit-button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-submit-button:hover,
+.register-submit-button:hover {
+    background-color: #0000FF;
+    color: white;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .center-section {
+        margin: 10px 0;
+    }
+
+    .side-bar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .games-grid,
+    .events-list,
+    .promotions-list,
+    .testimonials-list {
+        flex-wrap: wrap;
+    }
+
+    .game-card,
+    .event-item,
+    .promotion-item,
+    .testimonial-item {
+        flex: 1 1 45%;
+        margin: 10px 5%;
+    }
+
+    .popup {
+        width: 90%;
+    }
+}
