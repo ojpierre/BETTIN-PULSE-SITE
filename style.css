@@ -28,7 +28,10 @@ body {
     display: flex;
     justify-content: space-evenly;
     width: 500px;
+
 }
+
+
 
 .center-section .button-group button {
     margin: 5px;
@@ -87,6 +90,25 @@ body {
     text-align: right;
 }
 
+.profile-button {
+    
+   border: none;
+    background: none;
+    margin-top: 10px;
+
+
+}
+
+.profile-image {
+height: 25px;
+width: 25px;
+background-color:#3E3E3E;
+margin-top: 10px;
+cursor: pointer;
+
+
+}
+
 .login-button, .logout-button,
 .register-button {
     font-family: 'Dongle', sans-serif;
@@ -97,7 +119,7 @@ body {
     background-color: #000000;
     cursor: pointer;
     position: relative;
-    margin-left: 10px;
+    margin-left: 30px;
     transition: all 0.3s ease;
 }
 
