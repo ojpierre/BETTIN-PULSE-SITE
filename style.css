@@ -9,9 +9,10 @@ body {
 
 .center-section {
     text-align: center;
-    margin-top: 75px;
+    margin-top: 65px;
     display: flex;
         justify-content: space-between;
+        background-color: #3E3E3E;
         align-items: center;
         position: fixed;
             top: 0;
