@@ -482,6 +482,102 @@ h2 {
     border-radius: 5px;
 }
 
+.main-content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #2F2F2F;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.main-content h2 {
+    color: #FFFFFF;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.jackpot-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.jackpot-item {
+    background-color: #3E3E3E;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.jackpot-info h3 {
+    color: #FFFFFF;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.jackpot-info p {
+    color: #CCCCCC;
+    margin-bottom: 10px;
+}
+
+.join-button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.join-button:hover {
+    background-color: #0000FF;
+}
+
+.live-bets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.live-bet-item {
+    background-color: #3E3E3E;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.bet-info h3 {
+    color: #FFFFFF;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.bet-info p {
+    color: #CCCCCC;
+    margin-bottom: 10px;
+}
+
+.bet-button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.bet-button:hover {
+    background-color: #0000FF;
+}
+
 @media screen and (max-width: 768px) {
     .header {
         flex-direction: column;
