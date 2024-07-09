@@ -8,11 +8,40 @@ body {
     padding-left: 160px;
 }
 
+.center-1 {
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+ .center-1button {
+    font-family: 'Dongle', sans-serif;
+    color: white;
+    background-color: blue;
+    border: none;
+    height: 40px;
+    width: 90px;
+    font-size: large;
+    border-radius: 2px;
+}
+
+.amount-button {
+    height: 40px;
+    width: 90px;
+    background-color: #2F2F2F;
+    border: none;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);;
+
+}
+
 .center-section {
     text-align: center;
-    flex: 1; /* Allow the center section to take available space */
+    flex: 1; 
     display: flex;
-    justify-content: center; /* Center the button group */
+    flex-direction: column;
+    justify-content: center; 
     align-items: center;
 }
 
@@ -20,12 +49,15 @@ body {
     display: flex;
     justify-content: space-evenly;
     width: 500px;
+    height: 70px;
+    align-items: flex-end;
     
 }
 
 .center-section .button-group button {
-    margin: 5px;
+    margin-bottom: 5px;
     font-family: 'Dongle', sans-serif;
+    
     font-size: 20px;
     padding: 10px 20px;
     height: 40px;
@@ -53,7 +85,7 @@ body {
 }
 
 .header {
-    height: 80px;
+    height: 120px;
     background-color: #3E3E3E;
     display: flex;
     justify-content: space-between;
