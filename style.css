@@ -29,6 +29,8 @@ body {
 .amount-button {
     height: 40px;
     width: 90px;
+    font-family: 'Dongle', sans-serif;
+    font-size: large;
     background-color: #2F2F2F;
     border: none;
     color: white;
