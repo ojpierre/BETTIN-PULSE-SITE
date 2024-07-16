@@ -9,6 +9,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Dropdown functionality on hover
+  document.querySelectorAll(".dropdown-button").forEach((button) => {
+    const dropdownContent = button.nextElementSibling;
+
+    button.addEventListener("mouseenter", () => {
+      dropdownContent.style.display = "flex";
+    });
+
+    button.addEventListener("mouseleave", () => {
+      setTimeout(() => {
+        if (!dropdownContent.matches(":hover")) {
+          dropdownContent.style.display = "none";
+        }
+      }, 300);
+    });
+
+    dropdownContent.addEventListener("mouseleave", () => {
+      dropdownContent.style.display = "none";
+    });
+
+    dropdownContent.addEventListener("mouseenter", () => {
+      dropdownContent.style.display = "flex";
+    });
+  });
+
   // Horizontal scroll functionality
   const horizontalScrollContainers =
     document.querySelectorAll(".horizontal-scroll");
@@ -64,31 +89,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// profile popup 
+// profile popup
 document.addEventListener("DOMContentLoaded", () => {
- 
-
-  
   function positionPopupMenu() {
     const profileButton = document.querySelector(".profile-button");
     const popupMenu = document.getElementById("popupMenu");
 
-    
     const rect = profileButton.getBoundingClientRect();
     const buttonHeight = profileButton.offsetHeight;
 
-    
-    popupMenu.style.top = rect.top + buttonHeight + 10 + "px"; 
+    popupMenu.style.top = rect.top + buttonHeight + 10 + "px";
     popupMenu.style.left = rect.left + "px";
   }
 
- 
   const profileButton = document.querySelector(".profile-button");
   profileButton.addEventListener("click", () => {
     togglePopup();
   });
 
- 
   function togglePopup() {
     const popupMenu = document.getElementById("popupMenu");
     if (popupMenu.style.display === "none" || popupMenu.style.display === "") {
@@ -99,18 +117,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  
-  window.onclick = function(event) {
+  window.onclick = function (event) {
     const popupMenu = document.getElementById("popupMenu");
-    if (!event.target.matches('.profile-button, .profile-button *')) {
+    if (!event.target.matches(".profile-button, .profile-button *")) {
       if (popupMenu.style.display === "block") {
         popupMenu.style.display = "none";
       }
     }
   };
 
-  
-  window.onresize = function() {
+  window.onresize = function () {
     if (popupMenu.style.display === "block") {
       positionPopupMenu();
     }
