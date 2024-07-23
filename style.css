@@ -57,7 +57,7 @@ body {
 }
 
 .center-section .button-group button {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-family: 'Dongle', sans-serif;
     
     font-size: 20px;
@@ -611,16 +611,10 @@ h2 {
     background-color: #0000FF;
 }
 
-
-
-/* Style the link as a button */
 .button-mid {
     text-decoration: none;
-        /* Remove underline */
-        color: inherit;
-        /* Inherit the text color */
+    color: inherit;
     display: inline-block;
-    /* Display as inline block */
     border-radius: 4px;
 }
 
