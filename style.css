@@ -611,6 +611,7 @@ h2 {
     background-color: #0000FF;
 }
 
+<<<<<<< Updated upstream
 .button-mid {
     text-decoration: none;
     color: inherit;
@@ -655,6 +656,8 @@ h2 {
     background-color: #555;
 }
 
+=======
+>>>>>>> Stashed changes
 @media screen and (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -700,3 +703,97 @@ h2 {
         width: 90%;
     }
 }
+
+
+
+.main-payment {
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #2F2F2F;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.balance-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.balance-section h2 {
+    color: white;
+}
+
+.deposit-button,
+.withdraw-button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #000000;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.deposit-button:hover,
+.withdraw-button:hover {
+    background-color: #0000FF;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.method-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.method-button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #000000;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.method-button:hover {
+    background-color: #0000FF;
+}
+
+.method-details {
+    background-color: #3E3E3E;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.method-details h4 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.method-details label {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.method-details input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box
+}
+
+
+
+
+
+

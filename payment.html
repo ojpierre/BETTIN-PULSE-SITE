@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game - Bettinpulse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Common Header -->
+    <div class="header">
+        <div class="left-section">
+            LOGO
+        </div>
+        <div class="center-section">
+            <div class="button-group">
+                <button class="button-mid">Game One</button>
+                <button class="button-mid">Live Games</button>
+                <button class="button-mid">Cashout</button>
+                <button class="button-mid">Jackpots</button>
+            </div>
+        </div>
+        <div class="right-section">
+            <button class="profile-button"><img class="profile-image" src="images/profile.png" alt=""> </button>
+            <button class="logout-button">Logout</button>
+            <div class="popup-menu" id="popupMenu">
+                <ul>
+                    <li><a href="#">Wallet</a></li>
+                    <li><a href="#">Withdraw</a></li>
+                    <li><a href="#">Bet History</a></li>
+                    <li><a href="#">Bet Slip</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Common Sidebar -->
+    <div class="side-bar">
+        <div class="sidebar-section">
+            <div class="games-button"><ion-icon name="game-controller-outline"></ion-icon> <button
+                    class="game-button">Casino Games</button></div>
+            <div class="games-button"><ion-icon name="football-outline"></ion-icon> <button
+                    class="game-button">Sports</button></div>
+            <div class="games-button"><ion-icon name="megaphone-outline"></ion-icon> <button
+                    class="game-button">Forum</button></div>
+            <div class="games-button"><ion-icon name="chatbubbles-outline"></ion-icon> <button
+                    class="game-button">Support</button></div>
+            <div class="games-button"><ion-icon name="trophy-outline"></ion-icon> <button
+                    class="game-button">Promotions</button></div>
+            <div class="games-button"><ion-icon name="wallet-outline"></ion-icon> <button
+                    class="game-button">Wallet</button></div>
+            <div class="games-button"><ion-icon name="stats-chart-outline"></ion-icon> <button
+                    class="game-button">Statistics</button></div>
+            <div class="games-button"><ion-icon name="settings-outline"></ion-icon> <button
+                    class="game-button">Settings</button></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="main-payment">
+            <div class="balance-section">
+                <div class="balance-display">
+                    Balance: $1000
+                </div>
+                <div class="balance-buttons">
+                    <button id="deposit-button" class="balance-action-button">Deposit</button>
+                    <button id="withdraw-button" class="balance-action-button">Withdraw</button>
+                </div>
+            </div>
+            <div class="payment-methods">
+                <div class="method" id="deposit-methods" style="display: none;">
+                    <h2>Select Deposit Method</h2>
+                    <button class="method-button" data-method="mastercard">MasterCard</button>
+                    <button class="method-button" data-method="visa">Visa</button>
+                    <button class="method-button" data-method="crypto">Crypto</button>
+                    <button class="method-button" data-method="mpesa">M-Pesa</button>
+                    <div class="method-details" id="method-details"></div>
+                </div>
+                <div class="method" id="withdraw-methods" style="display: none;">
+                    <h2>Select Withdraw Method</h2>
+                    <button class="method-button" data-method="mastercard">MasterCard</button>
+                    <button class="method-button" data-method="visa">Visa</button>
+                    <button class="method-button" data-method="crypto">Crypto</button>
+                    <button class="method-button" data-method="mpesa">M-Pesa</button>
+                    <div class="method-details" id="method-details-withdraw"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ionicons Script -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
