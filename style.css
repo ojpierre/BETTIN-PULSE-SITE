@@ -9,7 +9,6 @@ body {
 }
 
 .center-1 {
-    height: 50px;
     display: flex;
     align-items: flex-end;
 
@@ -21,9 +20,10 @@ body {
     background-color: blue;
     border: none;
     height: 40px;
-    width: 90px;
+    width: 80px;
     font-size: large;
     border-radius: 2px;
+    text-decoration: none;
 }
 
 .amount-button {
@@ -619,7 +619,6 @@ h2 {
     background-color: #0000FF;
 }
 
-<<<<<<< Updated upstream
 .button-mid {
     text-decoration: none;
     color: inherit;
@@ -674,8 +673,116 @@ h2 {
     background-color: #555;
 }
 
-=======
->>>>>>> Stashed changes
+.main-payment {
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.balance-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 15px;
+}
+
+.balance-display {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.balance-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.balance-action-button {
+    padding: 10px 25px;
+    border: none;
+    color: #fff;
+    background-color: #2e2e2e;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.balance-action-button:hover {
+    background-color: #3b3b3b;
+}
+
+.balance-action-button:active {
+    transform: scale(0.98);
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.method {
+    background-color: #2e2e2e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.method h2 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.method-button {
+    padding: 12px 25px;
+    border: none;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 5px 0;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.method-button:hover {
+    background-color: #444;
+}
+
+.method-button:active {
+    transform: scale(0.98);
+}
+
+.method-details {
+    background-color: #3c3c3c;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.method-details h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.method-details label {
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.method-details input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #555;
+    color: #fff;
+}
+
 @media screen and (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -724,91 +831,6 @@ h2 {
 
 
 
-.main-payment {
-    margin-top: 150px;
-    padding: 20px;
-    background-color: #2F2F2F;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.balance-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.balance-section h2 {
-    color: white;
-}
-
-.deposit-button,
-.withdraw-button {
-    padding: 10px 20px;
-    border: none;
-    color: white;
-    background-color: #000000;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.deposit-button:hover,
-.withdraw-button:hover {
-    background-color: #0000FF;
-}
-
-.payment-methods {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.method-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.method-button {
-    padding: 10px 20px;
-    border: none;
-    color: white;
-    background-color: #000000;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.method-button:hover {
-    background-color: #0000FF;
-}
-
-.method-details {
-    background-color: #3E3E3E;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-}
-
-.method-details h4 {
-    color: white;
-    margin-bottom: 10px;
-}
-
-.method-details label {
-    color: white;
-    margin-bottom: 5px;
-}
-
-.method-details input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    box-sizing: border-box
-}
 
 
 
