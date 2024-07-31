@@ -397,6 +397,14 @@ h2 {
     box-sizing: border-box;
 }
 
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
 .login-submit-button,
 .register-submit-button {
     background-color: #000;
@@ -634,8 +642,18 @@ h2 {
 
 .dropdown-content {
     display: none;
-    flex-direction: column;
-    width: 100%;
+    /* Initially hide the dropdown */
+    opacity: 0;
+    /* Initially invisible */
+    transition: opacity 1s ease;
+    /* Adjust the speed and ease of the transition */
+}
+
+.dropdown-content.show {
+    display: grid;
+    /* Show the dropdown */
+    opacity: 1;
+    /* Fully visible */
 }
 
 .dropdown-button:hover .dropdown-content {

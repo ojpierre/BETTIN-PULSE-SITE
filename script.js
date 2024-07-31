@@ -14,23 +14,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const dropdownContent = button.nextElementSibling;
 
     button.addEventListener("mouseenter", () => {
-      dropdownContent.style.display = "flex";
+      dropdownContent.classList.add("show");
     });
 
     button.addEventListener("mouseleave", () => {
       setTimeout(() => {
         if (!dropdownContent.matches(":hover")) {
-          dropdownContent.style.display = "none";
+          dropdownContent.classList.remove("show");
         }
-      }, 300);
-    });
-
-    dropdownContent.addEventListener("mouseleave", () => {
-      dropdownContent.style.display = "none";
+      }, 300); // Adjust the delay as needed
     });
 
     dropdownContent.addEventListener("mouseenter", () => {
-      dropdownContent.style.display = "flex";
+      dropdownContent.classList.add("show");
+    });
+
+    dropdownContent.addEventListener("mouseleave", () => {
+      dropdownContent.classList.remove("show");
     });
   });
 
@@ -62,15 +62,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const registerPopup = document.getElementById("registerPopup");
   const closeButtons = document.querySelectorAll(".close");
 
-  loginButton.addEventListener("click", () => {
-    popupOverlay.style.display = "flex";
-    loginPopup.style.display = "block";
-  });
+  if (loginButton) {
+    loginButton.addEventListener("click", () => {
+      popupOverlay.style.display = "flex";
+      loginPopup.style.display = "block";
+      registerPopup.style.display = "none"; // Ensure only one popup is shown
+    });
+  }
 
-  registerButton.addEventListener("click", () => {
-    popupOverlay.style.display = "flex";
-    registerPopup.style.display = "block";
-  });
+  if (registerButton) {
+    registerButton.addEventListener("click", () => {
+      popupOverlay.style.display = "flex";
+      registerPopup.style.display = "block";
+      loginPopup.style.display = "none"; // Ensure only one popup is shown
+    });
+  }
 
   closeButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -80,55 +86,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  popupOverlay.addEventListener("click", (e) => {
-    if (e.target === popupOverlay) {
-      popupOverlay.style.display = "none";
-      loginPopup.style.display = "none";
-      registerPopup.style.display = "none";
-    }
-  });
-});
-
-// profile popup
-document.addEventListener("DOMContentLoaded", () => {
-  function positionPopupMenu() {
-    const profileButton = document.querySelector(".profile-button");
-    const popupMenu = document.getElementById("popupMenu");
-
-    const rect = profileButton.getBoundingClientRect();
-    const buttonHeight = profileButton.offsetHeight;
-
-    popupMenu.style.top = rect.top + buttonHeight + 10 + "px";
-    popupMenu.style.left = rect.left + "px";
+  if (popupOverlay) {
+    popupOverlay.addEventListener("click", (e) => {
+      if (e.target === popupOverlay) {
+        popupOverlay.style.display = "none";
+        loginPopup.style.display = "none";
+        registerPopup.style.display = "none";
+      }
+    });
   }
 
+  // Profile popup menu
   const profileButton = document.querySelector(".profile-button");
-  profileButton.addEventListener("click", () => {
-    togglePopup();
-  });
+  const popupMenu = document.getElementById("popupMenu");
 
-  function togglePopup() {
-    const popupMenu = document.getElementById("popupMenu");
-    if (popupMenu.style.display === "none" || popupMenu.style.display === "") {
-      positionPopupMenu(); // Position the popup menu
-      popupMenu.style.display = "block";
-    } else {
-      popupMenu.style.display = "none";
+  if (profileButton && popupMenu) {
+    profileButton.addEventListener("click", () => {
+      togglePopup();
+    });
+
+    function positionPopupMenu() {
+      const rect = profileButton.getBoundingClientRect();
+      const buttonHeight = profileButton.offsetHeight;
+
+      popupMenu.style.top = rect.top + buttonHeight + 10 + "px";
+      popupMenu.style.left = rect.left + "px";
     }
-  }
 
-  window.onclick = function (event) {
-    const popupMenu = document.getElementById("popupMenu");
-    if (!event.target.matches(".profile-button, .profile-button *")) {
-      if (popupMenu.style.display === "block") {
+    function togglePopup() {
+      if (
+        popupMenu.style.display === "none" ||
+        popupMenu.style.display === ""
+      ) {
+        positionPopupMenu(); // Position the popup menu
+        popupMenu.style.display = "block";
+      } else {
         popupMenu.style.display = "none";
       }
     }
-  };
 
-  window.onresize = function () {
-    if (popupMenu.style.display === "block") {
-      positionPopupMenu();
-    }
-  };
+    window.addEventListener("click", (event) => {
+      if (!event.target.matches(".profile-button, .profile-button *")) {
+        if (popupMenu.style.display === "block") {
+          popupMenu.style.display = "none";
+        }
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (popupMenu.style.display === "block") {
+        positionPopupMenu();
+      }
+    });
+  }
 });
