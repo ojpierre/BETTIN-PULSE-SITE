@@ -194,13 +194,36 @@
                 <span class="close">&times;</span>
                 <div class="login-container">
                     <h2>Login to your Account</h2>
-                    <form action="#" method="POST">
-                        <label for="login-username">Username:</label>
-                        <input type="text" id="login-username" name="username" required>
-                        <label for="login-password">Password:</label>
-                        <input type="password" id="login-password" name="password" required>
+                    <form action="#" method="POST" class="login-form">
+                        <div class="form-group">
+                            <label for="login-username" class="form-label">Username:</label>
+                            <input type="text" id="login-username" name="username" class="form-input" required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="login-password" class="form-label">Password:</label>
+                            <input type="password" id="login-password" name="password" class="form-input" required>
+                        </div>
+                    
+                        <!--<div class="form-group">
+                            <label for="login-email" class="form-label">Email:</label>
+                            <input type="email" id="login-email" name="email" class="form-input" required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="login-phone" class="form-label">Phone Number:</label>
+                            <input type="tel" id="login-phone" name="phone" class="form-input" pattern="[0-9]{10}" required>
+                        </div> -->
+                    
+                        <div class="form-group remember-me">
+                            <input type="checkbox" id="remember-me" name="remember-me" class="form-checkbox">
+                            <label for="remember-me" class="form-label-inline">Remember me</label>
+                        </div>
+                    
                         <button class="login-submit-button" type="submit">Login</button>
                     </form>
+
+                    <p>Don't have an account? <a href="#">Register</a></p>
                 </div>
             </div>
         </div>
@@ -211,15 +234,41 @@
                 <span class="close">&times;</span>
                 <div class="register-container">
                     <h2>Register</h2>
-                    <form action="#" method="POST">
-                        <label for="register-username">Username:</label>
-                        <input type="text" id="register-username" name="username" required>
-                        <label for="register-email">Email:</label>
-                        <input type="email" id="register-email" name="email" required>
-                        <label for="register-password">Password:</label>
-                        <input type="password" id="register-password" name="password" required>
-                        <button class="register-submit-button" type="submit">Register</button>
-                    </form>
+                        <form action="#" method="POST" class="register-form">
+                            <!--<div class="form-group">
+                                <label for="register-username" class="form-label">Username:</label>
+                                <input type="text" id="register-username" name="username" class="form-input" required>
+                            </div> -->
+
+                            <div class="form-group">
+                                <label for="register-email" class="form-label">Email:</label>
+                                <input type="email" id="register-email" name="email" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-password" class="form-label">Password:</label>
+                                <input type="password" id="register-password" name="password" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-phone" class="form-label">Phone Number:</label>
+                                <input type="tel" id="register-phone" name="phone" class="form-input" pattern="[0-9]{10}" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-dob" class="form-label">Date of Birth:</label>
+                                <input type="date" id="register-dob" name="dob" class="form-input" required>
+                            </div>
+
+                            <div class="form-group terms">
+                                <input type="checkbox" id="register-terms" name="terms" required>
+                                <label for="register-terms">I agree to the terms and conditions, and I am over 18 years old</label>
+                            </div>
+
+                            <button class="register-submit-button" type="submit">Register</button>
+                        </form>
+                    <p>Already have an account?<a href="#">Login</a> </p>
+
                 </div>
             </div>
         </div>

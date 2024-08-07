@@ -348,10 +348,11 @@ h2 {
 
 .popup-overlay {
     position: fixed;
+    margin-top: 96px;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 75%;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
     justify-content: center;
@@ -364,9 +365,10 @@ h2 {
     color: #000;
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
+    width: 450px;
     text-align: center;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 108px;
 }
 
 .popup-content {
@@ -782,6 +784,89 @@ h2 {
     background-color: #555;
     color: #fff;
 }
+
+/* Register Page and Form Style */
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-label {
+    width: 150px;
+    /* Adjust the width as necessary */
+    color: #000;
+    font-size: 1em;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+}
+
+.register-submit-button {
+    padding: 12px 25px;
+    border: none;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.register-submit-button:hover {
+    background-color: #444;
+}
+
+.register-submit-button:active {
+    transform: scale(0.98);
+}
+
+/* Login Page and Form Style */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-submit-button {
+    padding: 12px 25px;
+    border: none;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.login-submit-button:hover {
+    background-color: #444;
+}
+
+.login-submit-button:active {
+    transform: scale(0.98);
+}
+
+/* Media Queries */
 
 @media screen and (max-width: 768px) {
     .header {
