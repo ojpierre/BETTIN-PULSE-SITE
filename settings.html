@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Common Header -->
+    <div class="header">
+        <div class="left-section">
+            <a class="button-mid" href="index.html">
+                <img class="logo-image" src="images/logo.svg" alt="Hero Image">
+            </a>
+        </div>
+        <div class="center-section">
+            <div class="center-1">
+                <a class="center-1button" href="payment.html">Deposit</a>
+                <button class="amount-button">0.0000</button>
+                <a class="center-1button" href="payment.html">Withdraw</a>
+            </div>
+            <div class="button-group">
+                <button><a class="button-mid" href="game.html">Game</a></button>
+                <button><a class="button-mid" href="live-bets-scores.html">Live Games</a></button>
+                <button class="button-mid">Cashout</button>
+                <button><a class="button-mid" href="jackpots.html">Jackpots</a></button>
+            </div>
+        </div>
+        <div class="right-section">
+            <button class="profile-button"><img class="profile-image" src="images/profile.png" alt=""> </button>
+            <button class="logout-button"><a class="button-mid" href="index.html">Logout</a></button>
+            <div class="popup-menu" id="popupMenu">
+                <ul>
+                    <li><a href="wallet.html">Wallet</a></li>
+                    <li><a href="payment.html">Withdraw</a></li>
+                    <li><a href="bet-history.html">Bet History</a></li>
+                    <li><a href="bet-slip.html">Bet Slip</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="index.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Common Sidebar -->
+    <div class="side-bar">
+        <div class="sidebar-section">
+            <div class="games-button"><ion-icon name="game-controller-outline"></ion-icon> <button class="game-button dropdown-button">Casino Games</button>
+                <div class="dropdown-content">
+                    <button>Slots</button>
+                    <button>Blackjack</button>
+                    <button>Roulette</button>
+                </div>
+            </div>
+            <div class="games-button"><ion-icon name="football-outline"></ion-icon> <button class="game-button dropdown-button">Sports</button>
+                <div class="dropdown-content">
+                    <button>Football</button>
+                    <button>Basketball</button>
+                    <button>Tennis</button>
+                </div>
+            </div>
+            <div class="games-button"><ion-icon name="megaphone-outline"></ion-icon> <button class="game-button dropdown-button">Forum</button>
+                <div class="dropdown-content">
+                    <button>General</button>
+                    <button>Strategies</button>
+                    <button>Off-topic</button>
+                </div>
+            </div>
+            <div class="games-button"><ion-icon name="chatbubbles-outline"></ion-icon> <button class="game-button dropdown-button">Support</button>
+                <div class="dropdown-content">
+                    <button>FAQ</button>
+                    <button>Contact Us</button>
+                    <button>Live Chat</button>
+                </div>
+            </div>
+            <div class="games-button"><ion-icon name="pricetag-outline"></ion-icon> <button class="game-button dropdown-button">Promotions</button>
+                <div class="dropdown-content">
+                    <button>Welcome Bonus</button>
+                    <button>Free Spins</button>
+                    <button>Weekly Offers</button>
+                </div>
+            </div>
+            <div class="games-button"><ion-icon name="wallet-outline"></ion-icon> <button class="game-button">Wallet</button></div>
+            <div class="games-button"><ion-icon name="stats-chart-outline"></ion-icon> <button class="game-button">Statistics</button></div>
+            <div class="games-button"><ion-icon name="settings-outline"></ion-icon> <button class="game-button">Settings</button></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="settings-section">
+            <h2>Account Settings</h2>
+            <form action="#" method="post">
+                <div class="settings-item">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" value="current_username">
+                </div>
+                <div class="settings-item">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="current_email@example.com">
+                </div>
+                <div class="settings-item">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div class="settings-item">
+                    <label for="notification">Notifications</label>
+                    <select id="notification" name="notification">
+                        <option value="all">All</option>
+                        <option value="important">Important</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+                <div class="settings-buttons">
+                    <button type="submit" class="save-settings-button">Save Changes</button>
+                    <button type="button" class="cancel-settings-button" onclick="window.history.back();">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ionicons Script -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
