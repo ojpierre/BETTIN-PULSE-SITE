@@ -866,6 +866,178 @@ h2 {
     transform: scale(0.98);
 }
 
+/* Wallet Page Style */
+
+.wallet-section {
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #2F2F2F;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.wallet-balance {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.transaction-history {
+    margin-bottom: 20px;
+}
+
+.transaction-history h3 {
+    margin-bottom: 10px;
+}
+
+.transaction-history ul {
+    list-style: none;
+    padding: 0;
+}
+
+.transaction-history li {
+    margin-bottom: 10px;
+}
+
+.wallet-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.wallet-deposit-button,
+.wallet-withdraw-button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #000000;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.wallet-deposit-button:hover,
+.wallet-withdraw-button:hover {
+    background-color: #0000FF;
+}
+
+/* Bet History Page Style */
+
+.history-section {
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #2F2F2F;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.bet-history-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bet-history-table th,
+.bet-history-table td {
+    border: 1px solid #4E4E4E;
+    padding: 10px;
+    text-align: left;
+}
+
+.bet-history-table th {
+    background-color: #3E3E3E;
+}
+
+.bet-history-table tbody tr:nth-child(even) {
+    background-color: #3E3E3E;
+}
+
+/* Bet Slip Page Style */
+
+.bet-slip-section {
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #2F2F2F;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.bet-slip {
+    padding: 20px;
+    background-color: #3E3E3E;
+    border-radius: 10px;
+}
+
+.bet-details h3 {
+    margin-bottom: 10px;
+}
+
+.bet-slip-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.bet-confirm-button,
+.bet-cancel-button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #000000;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.bet-confirm-button:hover,
+.bet-cancel-button:hover {
+    background-color: #0000FF;
+}
+
+/* Settings Page Style */
+
+.settings-section {
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #2F2F2F;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.settings-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-form label {
+    margin-bottom: 5px;
+}
+
+.settings-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.settings-submit-button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #000000;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.settings-submit-button:hover {
+    background-color: #0000FF;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 768px) {
